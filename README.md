@@ -22,6 +22,16 @@ StaticMicVolumeApp.exe -v 30 --name SubStringOfMyMicName
 StaticMicVolumeApp.exe -v 30 -n SubStringOfMyMicName
 ```
 
+### Example autorun on startup
+1. Open the Registry Editor (**Win+R**, enter `regedit` and hit **OK**)
+2. Navigate to Registry Key `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
+3. **Edit** > **New** > **String Value** and name it `StaticMicVolumeApp` or similar.
+4. Select the new entry, then **Edit** > **Modify...**
+5. In the **Value data** field enter the path to the app and the command line parameters you want to use.
+```
+"C:\Path\To\StaticMicVolumeApp.exe" --volume 30 --interval 10
+```
+![image](https://github.com/user-attachments/assets/9de7f3d5-054d-43be-9d2f-65e4fb37119d)
 
 ### Dependencies
 - NAudio v1.7.3 https://www.nuget.org/packages/NAudio/1.7.3
